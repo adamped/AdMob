@@ -12,6 +12,7 @@ namespace Admob
 		public MainPage()
 		{
 			InitializeComponent();
+			this.BindingContext = new MainPageViewModel();
 		}
 	}
 }

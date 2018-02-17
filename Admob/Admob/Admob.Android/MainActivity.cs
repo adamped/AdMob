@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Gms.Ads;
 
 namespace Admob.Droid
 {
@@ -19,9 +20,11 @@ namespace Admob.Droid
 
             base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+			MobileAds.Initialize(ApplicationContext, "YOUR ANDROID APP ID HERE");
+
+			global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
-        }
-    }
+		}
+	}
 }
 
